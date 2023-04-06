@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media-quares.css">
+	<title>Таблица заявок</title>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="nav-body">
+				<nav class="nav">
+					<a href="/index.html" class="nav-link">Форма для заявки</a>
+					<a href="/table.html" class="nav-link">Таблица заявок</a>
+					<a href="/edit.html" class="nav-link">Редактирование заявки</a>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<section class="table-section">
+		<div class="container between">
+			<div class="panel">
+				<p class="panel-title">
+					<span>WebGalaxy</span>
+					CRM заявки 
+				</p>
+				<div class="panel-ava">
+					<img src="/img/ava.jpg" alt="Аватар" class="panel-ava__photo">
+					<h2 class="panel-ava__name">
+						Корбен Даллас
+					</h2>
+				</div>
+				<div class="list-box">
+					<h2 class="list-title">
+						Заявки
+					</h2>
+					<ul class="panel-list">
+						<li class="panel-list__item">
+							<a href="#" class="panel-list__link">Все</a>
+						</li>
+						<li class="panel-list__item">
+							<a href="#" class="panel-list__link">Новые</a>
+						</li>
+						<li class="panel-list__item">
+							<a href="#" class="panel-list__link">В работе</a>
+						</li>
+						<li class="panel-list__item">
+							<a href="#" class="panel-list__link">Завершенные</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="requests">
+				<h1 class="requests-title">Все заявки</h1>
+				<div class="form-table-box">
+					<form action="#" class="form-table">
+						<div class="status-bar" id="status-bar" role="group" aria-label="...">
+							<a href="" class="status-btn" data-value="all">Все</a>
+							<a href="" class="status-btn" data-value="new">Новые</a>
+							<a href="" class="status-btn" data-value="inwork">В работе</a>
+							<a href="" class="status-btn" data-value="complete">Завершенные</a>
+						</div>
+						<div class="products">
+							<select name="form-select" id="productSelect" class="select-table">
+								<option value="site-spa">Веб-приложение</option>
+								<option value="site-visit">Сайт-визитка</option>
+								<option value="site-shop">Интернет-магазин</option>
+								<option value="site-land">Лендинг</option>
+								<option value="site-corp">Многостраничный сайт</option>
+							</select>
+						</div>
+					</form>
+					<table class="table-request">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Дата</th>
+								<th>Продукт</th>
+								<th>Имя</th>
+								<th>Email</th>
+								<th>Телефон</th>
+								<th>Статус</th>
+							</tr>
+						</thead>
+						<tbody id="tbody">
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- js link -->
+	<script src="/js/model.js" type="module"></script>
+	<script src="/js/table/table.controller.js" type="module"></script>
+	<script src="/js/table/table.view.js" type="module"></script>
+</body>
+</html>

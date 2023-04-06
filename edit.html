@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Genos:wght@400;700&display=swap" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" href="css/main.css">
+	<title>Редактирование заявки</title>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="nav-body">
+				<nav class="nav">
+					<a href="/index.html" class="nav-link">Форма для заявки</a>
+					<a href="/table.html" class="nav-link">Таблица заявок</a>
+					<a href="/edit.html" class="nav-link">Редактирование заявки</a>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<section class="edit-section">
+		<div class="container center">
+			<h1 class="edit-title">
+				Изменить заявку
+			</h1>
+				<form action="" class="edit-form">
+					<div class="edit-body">
+						<p class="edit-body__title">
+							Данные о заявке
+						</p>
+						<div class="edit-data">
+							<p><strong>ID</strong></p>
+							<p><span id="number"></span>Заявка №</p>
+							<input type="hidden" name="id" id="id">
+						</div>
+						<div class="edit-date">
+							<p><strong>Дата создания</strong></p>
+							<div class="edit-date__window" id="date"></div>
+						</div>
+						<div class="edit-product">
+							<p><strong>Продукт</strong></p>
+							<div class="edit-select">
+								<select name="edit-select" id="product" class="edit-select">
+									<option value="site-spa">Веб-приложение</option>
+									<option value="site-visit">Сайт-визитка</option>
+									<option value="site-shop">Интернет-магазин</option>
+									<option value="site-land">Лендинг</option>
+									<option value="site-corp">Многостраничный сайт</option>
+								</select>
+							</div>
+						</div>
+						<div class="edit-name">
+							<p><strong>Имя:</strong></p>
+							<input type="text" class="edit-input" name="name" id="name" value="">
+						</div>
+						<div class="edit-name">
+							<p><strong>Email::</strong></p>
+							<input type="text" class="edit-input" name="email" id="email" value="">
+						</div>
+						<div class="edit-name">
+							<p><strong>Телефон:</strong></p>
+							<input type="text" class="edit-input" name="phone" id="phone" value="">
+						</div>
+						<div class="edit-status">
+							<p><strong>Статус заявки</strong></p>
+							<div class="edit-status__select">
+								<select class="custom-select" id="status" name="status">
+									<option selected="">Выберите...</option>
+									<option value="new">Новая</option>
+									<option value="inwork">В работе</option>
+									<option value="complete">Завершена</option>
+								</select>
+							</div>
+						</div>
+						<button type="submit" class="edit-btn form-btn">Сохранить изменения</button>
+					</div>
+				</form>
+		</div>
+	</section>
+	<!-- js link -->
+	<script src="/js/model.js"></script>
+	<script src="/js/edit/edit.controller.js"></script>
+	<script src="/js/edit/edit.view.js"></script>
+</body>
+</html>

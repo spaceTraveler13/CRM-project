@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media-quares.css">
+	<title>Форма заявки</title>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="nav-body">
+				<nav class="nav">
+					<a href="/index.html" class="nav-link">Форма для заявки</a>
+					<a href="/table.html" class="nav-link">Таблица заявок</a>
+					<a href="/edit.html" class="nav-link">Редактирование заявки</a>
+				</nav>
+			</div>
+		</div>
+	</header>	
+	<section class="form-section">
+		<div class="container center">
+			<div class="form-box">
+				<h1 class="form-title">
+					Форма заявки
+				</h1>
+				<form action="" method="post" class="form">
+					<input type="text" id="name" name="name" class="form-input" placeholder="Ваше имя">
+					<input type="text" id="phone" name="phone" class="form-input" placeholder="Ваш телефон">
+					<input type="email" id="email" name="email" class="form-input" placeholder="Ваша почта">
+					<label for="product">Продукт:</label>
+						<select name="product" id="product" class="form-select">
+							<option value="site-spa">Веб-приложение</option>
+							<option value="site-visit">Сайт-визитка</option>
+							<option value="site-shop">Интернет-магазин</option>
+							<option value="site-land">Лендинг</option>
+							<option value="site-corp">Многостраничный сайт</option>
+						</select>
+					<button type="submit" class="form-btn" id="form-btn">Оформить заявку</button>
+				</form>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<a href="" class="logo"></a>
+		</div>
+	</footer>
+	<!-- js link -->
+	<script src="./js/model.js" type="module"></script>
+	<script src="./js/form/form.controller.js" type="module"></script>
+	<script src="./js/form/form.view.js" type="module"></script>
+	<script src="./js/form/form.test-data.js"type="module"></script>
+</body>
+</html>
