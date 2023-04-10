@@ -142,7 +142,7 @@ select option{
 	justify-content: space-between;
 }
 .panel{
-	width: 320px;
+	width: 220px;
 	border-right: 2px solid #17B3D8;
 }
 .panel-title, .requests-title{
@@ -159,7 +159,7 @@ select option{
 	color: #17B3D8;
 }
 .requests{
-	width: 800px;
+	width: 900px;
 }
 .form-table-box{
 	width: 100%;

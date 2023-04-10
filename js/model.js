@@ -12,6 +12,35 @@ class Request {
         this.status = 'new'
     }
 }
+// объект для вывода названия продукта
+const products = {
+    'site-spa': 'Веб-приложение',
+    'site-visit': 'Сайт-визитка',
+    'site-shop': 'Интернет-магазин',
+    'site-land': 'Лендинг',
+    'site-corp': 'Многостраничный сайт'
+}
+// объект для вывода бэйджа
+const statuses = {
+    'new': 'Новая',
+    'inwork': 'В работе',
+    'complete': 'Завершена'
+}
+const filter = {
+    products: 'all',
+    status: 'all'
+}
+function changeFilter(props, value) {
+    filter[props] = value;
+    return filter
+}
+function filterRequests(filter) {
+    let filteredRequest;
+    if(filter.products !== 'all') {
+        filteredRequest = requests.filter((request) => request.product === filter.products);
+        return prepareRequests(filteredRequest) 
+    }
+}
 // функ.добавление заявки
 function addRequest (formData) {
     // определение id
@@ -34,20 +63,6 @@ function loadRequests() {
 // получение подготовленных заявок
 function getRequests(){
     return prepareRequests(requests);
-}
-// объект для вывода названия продукта
-const products = {
-    'site-spa': 'Веб-приложение',
-    'site-visit': 'Сайт-визитка',
-    'site-shop': 'Интернет-магазин',
-    'site-land': 'Лендинг',
-    'site-corp': 'Многостраничный сайт'
-}
-// объект для вывода бэйджа
-const statuses = {
-    'new': 'Новая',
-    'inwork': 'В работе',
-    'complete': 'Завершена'
 }
 // подготовка заявки для таблицы(корректировка даты, вывод имени продукта, вывод бейджа)
 function prepareRequests(requests){
@@ -77,4 +92,4 @@ function updateRequest(formData) {
     request.status = formData.get('status');
     saveRequests();
 }
-export {addRequest, getRequests, getRequestById, updateRequest}
+export {addRequest, getRequests, getRequestById, updateRequest, changeFilter, filterRequests}
