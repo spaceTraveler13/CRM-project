@@ -182,6 +182,14 @@ table th {
 	text-align: start;
 	font-size: 16px;
 }
+/* СТИЛИ ДЛЯ РЕДАКТИРОВАТЬ */
+.redux-request{
+	text-transform: lowercase;
+	color: #17B3D8;
+}
+.redux-request:hover{
+	text-decoration: underline;
+}
 
 /* ---EDIT-PAGE--- */
 

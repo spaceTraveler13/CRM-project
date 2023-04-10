@@ -22,7 +22,7 @@ function renderRequests(requests) {
                                     ${item.statusName}
                                 </div>
                             </td>
-                            <td><a href="#edit.html">Редактировать</a></td>
+                            <td><a href="/edit.html?id=${item.id}" class="redux-request">Редактировать</a></td>
                         </tr>`;
         elements.table.insertAdjacentHTML('beforeend', template)
     });

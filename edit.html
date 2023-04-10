@@ -36,7 +36,7 @@
 						</p>
 						<div class="edit-data">
 							<p><strong>ID</strong></p>
-							<p><span id="number"></span>Заявка №</p>
+							<p>Заявка №<span id="number"></span></p>
 							<input type="hidden" name="id" id="id">
 						</div>
 						<div class="edit-date">
@@ -46,7 +46,7 @@
 						<div class="edit-product">
 							<p><strong>Продукт</strong></p>
 							<div class="edit-select">
-								<select name="edit-select" id="product" class="edit-select">
+								<select name="product" id="product" class="edit-select" value="">
 									<option value="site-spa">Веб-приложение</option>
 									<option value="site-visit">Сайт-визитка</option>
 									<option value="site-shop">Интернет-магазин</option>
@@ -84,8 +84,8 @@
 		</div>
 	</section>
 	<!-- js link -->
-	<script src="/js/model.js"></script>
-	<script src="/js/edit/edit.controller.js"></script>
-	<script src="/js/edit/edit.view.js"></script>
+	<script src="/js/model.js" type="module"></script>
+	<script src="/js/edit/edit.controller.js" type="module"></script>
+	<script src="/js/edit/edit.view.js" type="module"></script>
 </body>
 </html>
