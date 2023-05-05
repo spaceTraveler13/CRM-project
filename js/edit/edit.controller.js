@@ -1,5 +1,5 @@
-import * as model from './../model.js'
-import * as view from './edit.view.js'
+import * as model from '/../model.js'
+import * as view from '/edit.view.js'
 
 function init() {
     const id = getRequestId();

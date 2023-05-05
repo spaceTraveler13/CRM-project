@@ -1,6 +1,6 @@
-import {addTestReq} from './form.test-data.js'
-import * as view from './form.view.js';
-import * as model from './../model.js';
+import {addTestReq} from '/form.test-data.js'
+import * as view from '/form.view.js';
+import * as model from '/../model.js';
 
 function init() {
     renderTestData();
